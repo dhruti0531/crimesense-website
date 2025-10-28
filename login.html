@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login · CrimeSense</title>
+    <meta name="description" content="Crime Management & Analytics platform">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <style>
+      .auth-container {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .auth-card {
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      .login-hero {
+        background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+        border-radius: 15px 15px 0 0;
+        padding: 2rem;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">CrimeSense</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Navigation will be populated by auth.js -->
+      </ul>
+      <button class="btn btn-outline-warning ms-lg-3" type="button" data-theme-toggle>☀️ Light</button>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <div class="auth-container">
+    <div class="card auth-card shadow-soft">
+      <div class="login-hero">
+        <h2 class="mb-2">Welcome Back</h2>
+        <p class="mb-0 opacity-75">Sign in to your CrimeSense account</p>
+      </div>
+      <div class="card-body p-4">
+        
+        <div id="loginAlert" class="alert alert-danger d-none" role="alert"></div>
+        
+        <form id="loginForm" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="loginEmail" required placeholder="Enter your email">
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" required placeholder="Enter your password">
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100 py-2 mb-3 fw-semibold">Sign In</button>
+          
+          <div class="text-center">
+            <a href="register.html" class="text-decoration-none">Don't have an account? Register here</a>
+          </div>
+
+          <div class="text-center mt-4 pt-3 border-top">
+            <small class="text-muted">Demo Account:</small><br>
+            <small><strong>Email:</strong> admin@crimesense.com</small><br>
+            <small><strong>Password:</strong> admin123</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <footer class="bg-dark text-light mt-auto">
+      <div class="container py-4">
+        <div class="row align-items-center g-2">
+          <div class="col-md-6 small">© <span id="year"></span> CrimeSense — Crime Management & Analytics</div>
+          <div class="col-md-6 text-md-end small">
+            <span class="text-secondary">Educational demo • Data stays in your browser</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

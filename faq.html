@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Faq · CrimeSense</title>
+    <meta name="description" content="Crime Management & Analytics platform">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">CrimeSense</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Navigation will be populated by auth.js -->
+      </ul>
+      <button class="btn btn-outline-warning ms-lg-3" type="button" data-theme-toggle>☀️ Light</button>
+    </div>
+  </div>
+</nav>
+<main class="container my-5">
+  <h1 class="mb-4">FAQ</h1>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">Is this official?</button></h2>
+      <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">No. CrimeSense is an educational demo. Data never leaves your device.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">How is my data stored?</button></h2>
+      <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">We use IndexedDB with a localStorage fallback. You can clear your browser storage anytime.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">Why separate pages?</button></h2>
+      <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Separate pages keep tasks focused and avoid long scrolling. Navigation takes you to distinct pages.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <footer class="bg-dark text-light mt-auto">
+      <div class="container py-4">
+        <div class="row align-items-center g-2">
+          <div class="col-md-6 small">© <span id="year"></span> CrimeSense — Crime Management & Analytics</div>
+          <div class="col-md-6 text-md-end small">
+            <span class="text-secondary">Educational demo • Data stays in your browser</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/auth.js"></script>  <!-- ADD THIS LINE -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/charts.js"></script>
+</body>
+</html>
+</html>

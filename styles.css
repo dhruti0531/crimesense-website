@@ -1,0 +1,188 @@
+:root {
+  --brand: #0d6efd;
+  --accent: #fbbf24; /* amber */
+  --bg-soft: #f6f8fb;
+}
+
+/* Enable Bootstrap color modes via data-bs-theme on <html> */
+html[data-bs-theme="dark"] body {
+  background-color: #0b0f19;
+}
+
+.hero {
+  background-image: url('../img/hero.svg');
+  background-size: cover;
+  background-position: center;
+  color: inherit; /* Let text color depend on theme */
+}
+
+/* Ensure hero text adapts to theme */
+[data-bs-theme="dark"] .hero {
+  color: #fff; /* white text in dark mode */
+}
+
+[data-bs-theme="light"] .hero {
+  color: #000; /* black text in light mode */
+}
+
+.card-rounded { border-radius: 1rem; }
+.shadow-soft { box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+.icon-badge { font-size: .85rem; }
+.navbar .nav-link.active { font-weight: 700; color: var(--accent) !important; }
+.badge-dot { display:inline-flex; align-items:center; gap:.45rem; }
+.badge-dot::before { content:''; width:.5rem; height:.5rem; border-radius:50%; background: var(--brand); display:inline-block; }
+.form-section { max-width: 900px; }
+.table-responsive { overflow-x: auto; }
+.preview-img { max-height: 140px; border-radius: .5rem; }
+footer a:hover { text-decoration: underline; }
+
+/* Theme-aware highlight for Crime Management text */
+[data-bs-theme="dark"] .highlight {
+  color: #ffc107; /* Yellow in dark mode */
+}
+
+[data-bs-theme="light"] .highlight {
+  color: #0d6efd; /* Blue in light mode */
+}
+
+/* Enhanced Auth Styles */
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.password-strength {
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.strength-weak { 
+    background-color: #dc3545; 
+    width: 25%; 
+}
+
+.strength-medium { 
+    background-color: #ffc107; 
+    width: 50%; 
+}
+
+.strength-strong { 
+    background-color: #198754; 
+    width: 100%; 
+}
+
+.form-text.strength-weak { color: #dc3545; }
+.form-text.strength-medium { color: #ffc107; }
+.form-text.strength-strong { color: #198754; }
+
+/* Loading states */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced form controls */
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    border-color: #0d6efd;
+}
+
+/* Dark mode adjustments for auth pages */
+[data-bs-theme="dark"] .auth-card {
+    background: linear-gradient(145deg, #1a1d23, #15181e);
+}
+
+[data-bs-theme="light"] .auth-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .auth-container {
+        margin: 1rem;
+        max-width: none;
+    }
+    
+    .auth-card {
+        border-radius: 10px;
+    }
+    
+    .navbar .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+    }
+}
+
+/* Enhanced dropdown for user menu */
+.navbar .dropdown-menu {
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    min-width: 200px;
+}
+
+[data-bs-theme="light"] .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Profile page styles */
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Improved mobile navigation */
+@media (max-width: 991.98px) {
+    .navbar-nav .dropdown-menu {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .navbar-nav .dropdown-item {
+        padding-left: 2rem;
+    }
+}
+
+/* Better form validation */
+.was-validated .form-control:valid {
+    border-color: #198754;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5 5 2 2m0-2-2 2'/%3e%3c/svg%3e");
+}
